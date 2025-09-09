@@ -4,15 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./styles.css" />
-    <!--tailwind and daisy ui -->
+    <link rel="stylesheet" href="./style.css" />
+    <!--tailwind and daisy ui-->
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@5"
       rel="stylesheet"
       type="text/css"
     />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <!--font awesome -->
+    <!--font awesome-->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
@@ -57,9 +57,7 @@
               <li><a>Plant A Tree</a></li>
             </ul>
           </div>
-          <a class="btn btn-ghost text-xl"
-            ><i class="fa-solid fa-seedling"></i>Green Earth</a
-          >
+          <a class="btn btn-ghost text-xl"><i class="fa-solid fa-seedling"></i>Green Earth</a>
         </div>
         <div class="navbar-center hidden lg:flex">
           <ul class="menu menu-horizontal px-1">
@@ -70,7 +68,7 @@
         </div>
         <div class="navbar-end">
           <button
-            class="btn bg-[#FACC15] border-none rounded-4xl text-[#15803D] drop-shadow-none"
+            class="btn bg-[#FACC15] border-none rounded-4xl text-[#15803D] hover:bg-white drop-shadow-none"
           >
             Plant a tree
           </button>
@@ -95,7 +93,7 @@
                 greener for future generations
               </p>
               <button
-                class="btn bg-[#FACC15] border-none rounded-4xl text-[#15803D]"
+                class="btn bg-[#FACC15] border-none rounded-4xl text-[#15803D] hover:bg-white"
               >
                 Get Involved
               </button>
@@ -110,53 +108,41 @@
       </div>
     </section>
 
-    <!-- product -->
-    <section class="md:p-10">
-      <!-- Header -->
-      <h1 class="text-center text-2xl font-bold py-6 text-gray-800">
-        Choose Your Trees
-      </h1>
+<section id="product-section" class="md:p-10">
+    <!-- Header -->
+  <h1 class="text-center text-2xl font-bold py-6 text-gray-800">Choose Your Trees</h1>
+  <section class="flex justify-center items-center mb-4 hidden" id="loading-indicator">
+    <span class="loading loading-bars loading-xl"></span>
+  </section>
+  
+  <!-- Main Grid -->
+  <div class="grid grid-cols-1 md:grid-cols-12 gap-6 px-6">
+    
+    <!-- Sidebar Categories -->
+    <aside id="tree-container" class=" md:col-span-2  bg-green-100 rounded-lg p-4">
+    </aside>
+    
+    <!-- Product Grid -->
+    <section id="product-container" class="md:col-span-7 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 row-span-1 gap-6">
+      <!-- Products will be dynamically inserted here -->
 
-      <!-- Main Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-12 gap-6 px-6">
-        <!-- Sidebar Categories -->
-        <aside
-          id="tree-container"
-          class="md:col-span-2 bg-green-100 rounded-lg p-4"
-        ></aside>
-
-        <!-- Product Grid -->
-        <section
-          id="product-container"
-          class="md:col-span-7 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 row-span-1 gap-6"
-        >
-          <!-- Products will be dynamically inserted here -->
-        </section>
-
-        <!-- Cart Section -->
-        <aside class="md:col-span-3 bg-white rounded-lg p-4">
-          <h2 class="font-semibold mb-4">Your Cart</h2>
-          <ul class="space-y-2 mb-4">
-            <li
-              class="flex justify-between items-center bg-white px-3 py-2 rounded"
-            >
-              <span>Mango Tree</span>
-              <span>৳500 × 1</span>
-            </li>
-            <li
-              class="flex justify-between items-center bg-white px-3 py-2 rounded"
-            >
-              <span>Guava Tree</span>
-              <span>৳500 × 1</span>
-            </li>
-          </ul>
-          <div class="font-bold text-lg flex justify-between">
-            <span>Total:</span>
-            <span>৳1000</span>
-          </div>
-        </aside>
-      </div>
     </section>
+    
+    <!-- Cart Section -->
+<aside class="md:col-span-3 bg-white rounded-lg p-4">
+  <h2 class="font-semibold mb-4">Your Cart</h2>
+  <ul class="space-y-2 mb-4 cart-items"></ul>
+  <div class="font-bold text-lg flex justify-between">
+    <span>Total:</span>
+    <span id="cart-total">Tk.0</span>
+  </div>
+</aside>
+
+    
+  </div>
+</section>
+
+    
     <!-- campaign -->
     <section class="my-10 px-6 py-6 min-h-50">
       <h1
@@ -190,7 +176,6 @@
         </div>
       </div>
     </section>
-
     <!-- impact -->
     <section class="px-6 py-6 min-h-50 bg-[#CFF0DC]">
       <div class="text-center mb-12">
@@ -199,25 +184,19 @@
         <div
           class="grid grid-cols-1 sm:max-h-3xl md:grid-cols-3 gap-8 max-w-6xl mx-auto"
         >
-          <div
-            class="bg-white p-6 rounded-lg shadow-md text-center hover:bg-yellow-100"
-          >
+          <div class="bg-white p-6 rounded-lg shadow-md text-center hover:bg-yellow-100 ">
             <div class="">
               <h2 class="text-5xl text-[#15803D]">100K+</h2>
               <p class="text-[#1F2937] text-sm">Trees Planted</p>
             </div>
           </div>
-          <div
-            class="bg-white p-6 rounded-lg shadow-md text-center hover:bg-yellow-100"
-          >
+          <div class="bg-white p-6 rounded-lg shadow-md text-center hover:bg-yellow-100">
             <div class="">
               <h2 class="text-5xl text-[#15803D]">120K+</h2>
               <p class="text-[#1F2937] text-sm">Communities Served</p>
             </div>
           </div>
-          <div
-            class="bg-white p-6 rounded-lg shadow-md text-center hover:bg-yellow-100"
-          >
+          <div class="bg-white p-6 rounded-lg shadow-md text-center hover:bg-yellow-100">
             <div class="">
               <h2 class="text-5xl text-[#15803D]">30+</h2>
               <p class="text-[#1F2937] text-sm">Countries reached</p>
@@ -226,10 +205,10 @@
         </div>
       </div>
     </section>
-
     <!-- form -->
     <section>
       <div class="hero bg-[#166534] min-h-lg">
+
         <div class="hero-content flex-col my-10">
           <h2 class="text-3xl text-white">Plant a tree today</h2>
           <div
@@ -264,8 +243,7 @@
       <p>Copyright © 2025 - All right reserved</p>
     </footer>
 
-    <!--modal-->
-    <!-- Open the modal using ID.showModal() method -->
+<!-- Open the modal using ID.showModal() method -->
 <!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
 <dialog id="word_modal" class="modal modal-bottom sm:modal-middle">
   <div class="modal-box">
@@ -280,6 +258,7 @@
   </div>
 </dialog>
 
-    <script src="./index.js"></script>
+<script src="./index.js"></script>
+
   </body>
 </html>
