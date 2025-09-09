@@ -13,16 +13,21 @@
     />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <!--font awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
       * {
         font-family: "Inter", sans-serif;
       }
     </style>
-
   </head>
   <body class="bg-[#DCFCE7]">
-        <!-- Navbar -->
+    <!-- Navbar -->
     <section>
       <div class="navbar bg-[#15803D] text-white md:px-20 py-2">
         <div class="navbar-start">
@@ -52,7 +57,9 @@
               <li><a>Plant A Tree</a></li>
             </ul>
           </div>
-          <a class="btn btn-ghost text-xl"><i class="fa-solid fa-seedling"></i>Green Earth</a>
+          <a class="btn btn-ghost text-xl"
+            ><i class="fa-solid fa-seedling"></i>Green Earth</a
+          >
         </div>
         <div class="navbar-center hidden lg:flex">
           <ul class="menu menu-horizontal px-1">
@@ -71,6 +78,37 @@
       </div>
     </section>
 
+    <!--Banner-->
+    <section>
+      <div class="flex justify-center items-center gap-3 bg-[#CFF0DC]">
+        <img
+          src="./assets/hero-leaf1.png"
+          alt=""
+          class="hidden lg:block w-150"
+        />
+        <div class="hero bg-[#CFF0DC] max-h-200">
+          <div class="hero-content text-center">
+            <div class="">
+              <h1 class="text-5xl font-bold">Plant a Tree, Grow a Future</h1>
+              <p class="py-6">
+                Join our mission to plant 1 million trees and make the Earth
+                greener for future generations
+              </p>
+              <button
+                class="btn bg-[#FACC15] border-none rounded-4xl text-[#15803D]"
+              >
+                Get Involved
+              </button>
+            </div>
+          </div>
+        </div>
+        <img
+          src="./assets/hero-leaf2.png"
+          alt=""
+          class="hidden lg:block w-150"
+        />
+      </div>
+    </section>
 
     <script src="./index.js"></script>
   </body>
