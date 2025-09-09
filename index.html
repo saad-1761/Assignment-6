@@ -110,6 +110,53 @@
       </div>
     </section>
 
+    <!-- product -->
+    <section class="md:p-10">
+      <!-- Header -->
+      <h1 class="text-center text-2xl font-bold py-6 text-gray-800">
+        Choose Your Trees
+      </h1>
+
+      <!-- Main Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-6 px-6">
+        <!-- Sidebar Categories -->
+        <aside
+          id="tree-container"
+          class="md:col-span-2 bg-green-100 rounded-lg p-4"
+        ></aside>
+
+        <!-- Product Grid -->
+        <section
+          id="product-container"
+          class="md:col-span-7 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 row-span-1 gap-6"
+        >
+          <!-- Products will be dynamically inserted here -->
+        </section>
+
+        <!-- Cart Section -->
+        <aside class="md:col-span-3 bg-white rounded-lg p-4">
+          <h2 class="font-semibold mb-4">Your Cart</h2>
+          <ul class="space-y-2 mb-4">
+            <li
+              class="flex justify-between items-center bg-white px-3 py-2 rounded"
+            >
+              <span>Mango Tree</span>
+              <span>৳500 × 1</span>
+            </li>
+            <li
+              class="flex justify-between items-center bg-white px-3 py-2 rounded"
+            >
+              <span>Guava Tree</span>
+              <span>৳500 × 1</span>
+            </li>
+          </ul>
+          <div class="font-bold text-lg flex justify-between">
+            <span>Total:</span>
+            <span>৳1000</span>
+          </div>
+        </aside>
+      </div>
+    </section>
     <!-- campaign -->
     <section class="my-10 px-6 py-6 min-h-50">
       <h1
@@ -216,6 +263,22 @@
     <footer class="bg-[#14532D] text-white text-center items-center p-4">
       <p>Copyright © 2025 - All right reserved</p>
     </footer>
+
+    <!--modal-->
+    <!-- Open the modal using ID.showModal() method -->
+<!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
+<dialog id="word_modal" class="modal modal-bottom sm:modal-middle">
+  <div class="modal-box">
+    <div id="modal-container" class="space-y-2">
+
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
 
     <script src="./index.js"></script>
   </body>
